@@ -1,0 +1,116 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  font-family: "Montserrat-Bold";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+button{
+  font-family: "Montserrat-Bold";
+}
+
+.container{
+  max-width: 1165px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3{
+    text-align: center;
+    font-size: 45px;
+    line-height: 140%;
+    font-family: "Magnolia Script";
+    background: linear-gradient(45deg, #ff7393 37%, #8c83e5 53%, #029bd1 99%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: -76px;
+      background-image: url(../images/title-left.png);
+      width: 38px;
+      height: 35px;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: -76px;
+      background-image: url(../images/title-right.png);
+      width: 50px;
+      height: 31px;
+    }
+
+  }
+  span{
+    font-size: 14px;
+    line-height: 140%;
+    color: #586983;
+  }
+  
+}
+
+.btn{
+  color: #054c7a;
+  font-size: 10px;
+  line-height: 140%;
+  padding: 12px 27px 9px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  position: relative;
+  background: #43d5e2 url(../images/btn-star.png) no-repeat;
+  background-position: center;
+  box-shadow: 0px 3px 1px #36a4dd, 2px 4px 10px #ccc;
+}
+
+.crumbs {
+  padding: 28px 0;
+}
+.crumbs__inner {
+}
+.crumbs__list {
+  display: flex;
+  font-size: 14px;
+  color: #8155c3;
+}
+.crumbs__list li {
+  position: relative;
+  &:not(:last-child){
+    padding-right: 15px;
+    margin-right: 15px;
+  }
+  &:not(:last-child){
+    &::after{
+      content: '/';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 5px;
+      height: 10px;
+    }
+  }
+  &:last-child{
+    color: #586983;
+  }
+}
